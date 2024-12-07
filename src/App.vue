@@ -25,10 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, shallowRef } from 'vue';
 
 const currentIndex = ref('01')
-const currentFile = ref(null);
+const currentFile = shallowRef(null);
 const error = ref('');
 const padIndex = (index: number) => String(index).padStart(2, '0');
 const importFile = async () => {
